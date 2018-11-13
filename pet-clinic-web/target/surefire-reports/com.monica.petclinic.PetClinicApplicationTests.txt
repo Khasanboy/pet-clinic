@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.monica.petclinic.PetClinicApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.507 s - in com.monica.petclinic.PetClinicApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.618 s - in com.monica.petclinic.PetClinicApplicationTests
