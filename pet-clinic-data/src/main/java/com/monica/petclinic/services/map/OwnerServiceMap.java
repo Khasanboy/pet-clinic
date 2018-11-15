@@ -2,9 +2,11 @@ package com.monica.petclinic.services.map;
 
 import com.monica.petclinic.model.Owner;
 import com.monica.petclinic.services.CrudService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class OwnerServiceMap extends AbstractMapService<Owner, Long>  implements CrudService<Owner, Long> {
 
     @Override
