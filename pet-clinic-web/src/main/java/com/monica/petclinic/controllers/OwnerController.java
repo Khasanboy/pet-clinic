@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class OwnerController {
 
-    private OwnerServiceMap ownerServiceMap;
+    private final OwnerServiceMap ownerServiceMap;
 
     public OwnerController(OwnerServiceMap ownerServiceMap) {
         this.ownerServiceMap = ownerServiceMap;

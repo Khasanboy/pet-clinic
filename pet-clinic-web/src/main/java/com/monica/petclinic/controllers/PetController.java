@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class PetController {
 
-    private PetServiceMap petServiceMap;
+    private final PetServiceMap petServiceMap;
 
     @Autowired
     public PetController(PetServiceMap petServiceMap) {
