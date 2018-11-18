@@ -1,7 +1,6 @@
 package com.monica.petclinic.controllers;
 
-import com.monica.petclinic.services.map.PetServiceMap;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.monica.petclinic.services.PetService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -9,16 +8,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class PetController {
 
-    private final PetServiceMap petServiceMap;
+    private final PetService petService;
 
-    @Autowired
-    public PetController(PetServiceMap petServiceMap) {
-        this.petServiceMap = petServiceMap;
+    public PetController(PetService petService) {
+        this.petService = petService;
     }
 
     @RequestMapping({"/pets", "/pets/index", "/pets/index.html"})
     public String listPets(Model model){
-        model.addAttribute("pets", petServiceMap.findAll());
+        model.addAttribute("pets", petService.findAll());
 
         return "pets/index";
     }
