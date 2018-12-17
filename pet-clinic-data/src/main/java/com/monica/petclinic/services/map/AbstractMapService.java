@@ -1,6 +1,6 @@
 package com.monica.petclinic.services.map;
 
-import com.monica.petclinic.model.BaseEntity;
+import com.monica.petclinic.models.BaseEntity;
 
 import java.util.*;
 

@@ -1,6 +1,6 @@
 package com.monica.petclinic.services.map;
 
-import com.monica.petclinic.model.Speciality;
+import com.monica.petclinic.models.Speciality;
 import com.monica.petclinic.services.SpecialityService;
 import org.springframework.stereotype.Service;
 

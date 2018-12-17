@@ -1,7 +1,7 @@
 package com.monica.petclinic.bootstrap;
 
 
-import com.monica.petclinic.model.*;
+import com.monica.petclinic.models.*;
 import com.monica.petclinic.services.OwnerService;
 import com.monica.petclinic.services.PetTypeService;
 import com.monica.petclinic.services.SpecialityService;
