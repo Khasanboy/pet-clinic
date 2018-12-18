@@ -2,10 +2,7 @@ package com.monica.petclinic.bootstrap;
 
 
 import com.monica.petclinic.models.*;
-import com.monica.petclinic.services.OwnerService;
-import com.monica.petclinic.services.PetTypeService;
-import com.monica.petclinic.services.SpecialityService;
-import com.monica.petclinic.services.VetService;
+import com.monica.petclinic.services.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -19,13 +16,14 @@ public class DataLoader implements CommandLineRunner {
     //private final PetService petService;
     private final PetTypeService petTypeService;
     private final SpecialityService specialityService;
+    private final VisitService visitService;
 
-
-    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService, SpecialityService specialityService) {
+    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService, SpecialityService specialityService, VisitService visitService) {
         this.ownerService = ownerService;
         this.vetService = vetService;
         this.petTypeService = petTypeService;
         this.specialityService = specialityService;
+        this.visitService = visitService;
     }
 
     @Override
@@ -81,6 +79,13 @@ public class DataLoader implements CommandLineRunner {
 
 
         ownerService.save(owner2);
+        Visit catVisit = new Visit();
+        catVisit.setPet(fionasCat);
+        catVisit.setDate(LocalDate.now());
+        catVisit.setDescription("Sneezy kitty");
+
+        visitService.save(catVisit);
+
         System.out.println("Owners are loaded");
 
         Speciality radiolody = new Speciality();
